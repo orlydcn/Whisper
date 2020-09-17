@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_popular_feed">
+
+    <fragment
+        android:id="@+id/fragment_popular_feed"
+        android:name="com.orly.whispers.ui.popularfeed.PopularFeedFragment"
+        android:label="@string/popular_feed"
+        tools:layout="@layout/fragment_popular_feed">
+
+        <action
+            android:id="@+id/action_feed_to_replies"
+            app:destination="@id/fragment_replies" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_replies"
+        android:name="com.orly.whispers.ui.replies.RepliesFragment"
+        android:label="{origin}"
+        tools:layout="@layout/fragment_replies">
+        <action
+            android:id="@+id/action_replies_to_replies"
+            app:destination="@id/fragment_replies" />
+        <argument
+            android:name="origin"
+            app:argType="string" />
+        <argument
+            android:name="wid"
+            app:argType="string" />
+    </fragment>
+</navigation>

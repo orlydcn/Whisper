@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_whisper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_whisper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha=".75"
+                android:contentDescription="@string/whisper_image"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@id/tv_me"
+                app:layout_constraintDimensionRatio="160:230"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@mipmap/icon_placeholder" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_time"
+                style="@style/WhisperTextView"
+                app:drawableStartCompat="@mipmap/icon_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_me"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_whisper"
+                tools:text="5hr" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_me"
+                style="@style/WhisperTextView"
+                app:drawableStartCompat="@mipmap/icon_like"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_replies"
+                app:layout_constraintStart_toEndOf="@id/tv_time"
+                app:layout_constraintTop_toBottomOf="@id/iv_whisper"
+                tools:text="477" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_replies"
+                style="@style/WhisperTextView"
+                app:drawableStartCompat="@mipmap/icon_reply"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_me"
+                app:layout_constraintTop_toBottomOf="@id/iv_whisper"
+                tools:text="223" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Whispers</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="retry">Retry</string>
+    <string name="whisper_image">Whisper Image</string>
+    <string name="popular_feed">Popular Feed</string>
+    <string name="response_to">"In response to: %1$s"</string>
+</resources>
